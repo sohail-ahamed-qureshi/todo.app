@@ -1,4 +1,8 @@
-<app-to-do-create (addTodo)="AddTodo($event)"></app-to-do-create>
+<div class="container">
+    <div class="my-3">
+        <h1 class="text-center">To-do List</h1>
+    </div>
+    <app-to-do-create (addTodo)="AddTodo($event)"></app-to-do-create>
 <h2 class="text-left my-3">Your Todos</h2>
 <div *ngIf="this.todosList.length === 0; else elseBlock">No Todos to display</div>
 <ng-template #elseBlock>
@@ -6,3 +10,6 @@
         <app-todos-display [todo]="todo" (todoDelete)="DeleteTodo($event)" (markAsDoneTodo)="ToggleTodo($event)"></app-todos-display>
     </div>
 </ng-template>
+</div>
+
+<app-footer></app-footer>
