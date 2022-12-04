@@ -3,7 +3,7 @@
         <h4 [ngClass]="{'strike':!this.todo.isActive, 'nostrike': this.todo.isActive}" class="display-inline">{{todo.title}}</h4>
     </span>
 <div>
-    <input [checked]="this.todo.isActive === false" class="display-inline mx-3"(click)="markAsDone(todo)" type="checkbox" name="isActive" id="isActive">
+    <input [checked]="this.todo.isActive === false" tooltip class="display-inline mx-3"(click)="markAsDone(todo)" type="checkbox" name="isActive" id="isActive">
     <p class="display-inline" [ngClass]="{'strike':!this.todo.isActive, 'nostrike': this.todo.isActive}" class="display-inline">{{todo.description}}</p>
 </div>
     <button class="btn btn-danger" (click)="deleteTodo(todo)" >Delete</button>
